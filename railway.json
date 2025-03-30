@@ -1,0 +1,12 @@
+{
+    "build": {
+      "builder": "nixpacks",
+      "buildCommand": "apt-get update && apt-get install -y python3 python-is-python3 && npm ci && npm run build"
+    },
+    "deploy": {
+      "startCommand": "npm run start:prod",
+      "healthcheckPath": "/",
+      "healthcheckTimeout": 100,
+      "restartPolicyType": "ON_FAILURE"
+    }
+  }
