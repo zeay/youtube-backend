@@ -7,7 +7,7 @@ export class YoutubeController {
     private readonly logger = new Logger(YoutubeController.name);
     constructor(private readonly youtubeService: YoutubeService) {}
 
-    @Get('info')
+    @Get('health')
     async getHealth(@Query('url') url: string) {
         return {message: "OK"};
     }
