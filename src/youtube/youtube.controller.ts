@@ -8,6 +8,11 @@ export class YoutubeController {
     constructor(private readonly youtubeService: YoutubeService) {}
 
     @Get('info')
+    async getHealth(@Query('url') url: string) {
+        return {message: "OK"};
+    }
+
+    @Get('info')
     async getVideoInfo(@Query('url') url: string) {
         return this.youtubeService.getVideoInfo(url);
     }
