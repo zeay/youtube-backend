@@ -34,6 +34,7 @@ export class YoutubeService {
           noCheckCertificates: true,
           preferFreeFormats: true,
           youtubeSkipDashManifest: true,
+          cookies: '/home/ubuntu/tools/backend/youtube-backend/cookies.txt'
         });
         
         this.logger.log(`Successfully retrieved info for video: ${output}`);
